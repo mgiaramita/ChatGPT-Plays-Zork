@@ -72,7 +72,7 @@ def chatgpt_zork_loop(command, model):
         {"role": "assistant", "content": "OK"},
     ]
 
-    zork_proc = pexpect.spawn(command)
+    zork_proc = pexpect.spawn(command, echo=False)
     print("ChatGPT and Zork are ready to begin.")
 
     while True:
